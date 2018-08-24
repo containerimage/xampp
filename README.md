@@ -1,6 +1,6 @@
-This image is intended for PHP+MySQL development. For convenience, it also runs SSH server to connect to. __Both MySQL and phpmyadmin use default XAMPP password__.
+This image is for PHP+MySQL development. It also has on board an SSH server to which you can connect. __MySQL and PhpMyAdmin use the default XAMPP passwords__.
 
-## Running the image:
+## How to run the image:
 
 This image uses /www directory for your page files, so you need to mount it.
 
