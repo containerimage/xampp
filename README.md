@@ -49,6 +49,6 @@ docker run --name myXampp -p 41061:22 -p 41062:80 -d -v ~/my_web_pages:/www  -v 
 
 Once you have modified configuration for example
 ```
-docker exec myXampp /opt/lampp/lampp restart
+docker exec myContainerName /opt/lampp/lampp restart
 ```
 Please report any issues in issues section on github: https://github.com/quickcontainer/xampp/issues where we can track them conveniently. Thank you
