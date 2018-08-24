@@ -14,22 +14,20 @@ RUN apt-get -y install curl net-tools
 
 
 RUN curl -o xampp-linux-installer.run "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/5.6.21/xampp-linux-x64-5.6.21-0-installer.run?from_af=true"
-CMD echo Install Success1
+
 
 RUN chmod +x xampp-linux-installer.run
-CMD echo Install Success2
+
 
 RUN bash -c './xampp-linux-installer.run'
-CMD echo Install Success3
 
 RUN ln -sf /opt/lampp/lampp /usr/bin/lampp
-CMD echo Install Success4
+
 
 
 # Enable XAMPP web interface(remove security checks)
 
 RUN sed -i.bak s'/Require local/Require all granted/g' /opt/lampp/etc/extra/httpd-xampp.conf
-CMD echo Install Success5
 
 
 # Enable includes of several configuration files
@@ -114,7 +112,4 @@ RUN echo '/opt/lampp/lampp start' >> /startup.sh
 
 RUN echo '/usr/bin/supervisord -n' >> /startup.sh
 
-CMD echo Install Success99
-
 CMD ["sh", "/startup.sh"]
-CMD echo Install Success100
