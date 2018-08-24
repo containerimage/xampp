@@ -5,7 +5,7 @@ This image is for PHP+MySQL development. It also has on board an SSH server to w
 This image uses /www directory for your page files, so you need to mount it.
 
 ```
-docker run --name myContainerName -p 41061:22 -p 41062:80 -d -v ~/WebSites:/www quicksetup/xampp
+docker run --name myContainerName -p 41061:22 -p 41062:80 -d -v ~/personalwebsites:/www quicksetup/xampp
 ```
 The command above will expose the SSH server on port 41061 and HTTP server on port 41062.    
 Feel free to use your own name for the container...
